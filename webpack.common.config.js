@@ -20,12 +20,15 @@ module.exports = {
     devServer: {
         static: {
             directory: path.join(__dirname, "dist")
+            
         },
         compress: true, // gzip压缩
         port: 9000, // 指定端口
         open: true, // 自动打开浏览器
+        
     },
     plugins: [
+
         new HtmlWebpackPlugin({
             template: 'src/index.html' // 以src/目录下的index.html为模板打包
         }),
@@ -35,6 +38,7 @@ module.exports = {
     ],
 
     //  打包css scss less 图片 等文件
+    
     module: {
         rules: [{
                 test: /\.css$/i,
@@ -49,14 +53,19 @@ module.exports = {
             {
                 test: /\.m?js$/,
                 exclude: /(node_modules|bower_components)/,
-                use: {
-                    // ['style-loader', 'css-loader', 'postcss-loader', 'less-loader']
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['@babel/preset-env']
-                    }
-                }
+               
             },
+            {
+                test: /\.m?js$/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                  loader: 'babel-loader',
+                  options: {
+                    presets: ['@babel/preset-env'],
+                    plugins: ["@babel/plugin-transform-runtime"]
+                  }
+                }
+              },
             {
                 test: /\.(png|jpeg|jpg|gif)$/,
                 use: [{

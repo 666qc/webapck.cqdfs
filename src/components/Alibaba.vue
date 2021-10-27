@@ -1,18 +1,16 @@
 <template>
     <div class="registerContainer">
-       <h1>阿里巴巴  --{{msg}}</h1>
+       <h1>阿里巴巴  </h1>
+    
+       <router-link to='/Alibaba/Taobao'>淘宝</router-link>
+               <router-view></router-view>
+                 
     </div>
 </template>
 
 <script>
-import Goods from "@api/goods.js"
-console.log(Goods);
     export default {
-        data(){
-            return{
-                msg:"淘宝"
-            }
-        }
+        name:"Alibaba"
     }
 </script>
 

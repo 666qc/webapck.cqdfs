@@ -1,13 +1,14 @@
 <template>
     <div>
-        <h3>英雄联盟</h3>
+        <h1>我的淘宝 </h1>
+
     </div>
 </template>
 
-<script setup>
-export default {
-    
-}
+<script>
+    export default {
+        name:"Taobao"
+    }
 </script>
 
 <style lang="scss" scoped>

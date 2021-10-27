@@ -1,25 +1,18 @@
 <template>
     <div class="tx">
-        <h1>腾讯组件   --{{mse}}</h1>
-        <router-link to="/Tencent/wzry">王者荣耀</router-link>
-
-        <router-link to='/Tencent/yxlm'>英雄联盟</router-link>s
+        <h1>腾讯组件 </h1>
+        <router-link to="/Tencent/KingGlory" class="de-underline">王者荣耀</router-link>
+        <router-link to='/Tencent/LOL' class="de-underline">英雄联盟</router-link>
         <router-view></router-view>
     </div>
 </template>
-
 <script>
     export default {
-        data(){
-            return{
-                mse:"王者荣耀"
-            }
-        }
+
     }
 </script>
-
 <style lang="scss" scoped>
     .tx{
-        background-color: sandybrown;
+        background-color: rgb(123, 96, 244);
     }
 </style>
